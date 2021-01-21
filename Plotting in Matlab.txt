@@ -1,0 +1,13 @@
+%MERT DUMANLI
+
+x = -pi:0.01:pi; %for define the range(x) [-π,+π]
+
+f0 = exp(x); %for define the 1st graphic y = e^x
+f1 = exp(x).*sin(x.^2); %for define the 2nd graphic y = e^x * sin(x^2)
+f2 = exp(x).*cos(x.^2); %for define the 3rd graphic y = e^x * cos(x^2)
+
+subplot(1,2,1);plot(x,f0,'g','LineWidth',5);title('Plot 1');axis([-pi pi 0 25]);ylabel('exp(x)','fontsize',[15]);xlabel('x','fontsize',[15]);
+%for display to 1st graphic "to be display at the 1st location"
+
+subplot(1,2,2);plot(x,f1,'b',x,f2,'r--');legend('y = exp(x)*sin(x^2)','y = exp(x)*cos(x^2)');title('Plot 2');axis([-pi pi -25 25]);ylabel('y','fontsize',[15]);xlabel('x','fontsize',[15]);
+%for display to 2nd and 3rd graphic together "to be display at the 2nd location"

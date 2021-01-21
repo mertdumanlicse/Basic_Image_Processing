@@ -1,0 +1,18 @@
+%MERT DUMANLI
+
+p = imread('my_image.jpg');%for read to my image/photo (in the same position as my work)
+
+subplot(2,2,1);imshow(p);title('RGB');%to display to my image(original appearance/RGB format) "to be display at the 1st location"
+
+gray = rgb2gray(p);%for convert the image to grayscale
+
+subplot(2,2,2);imshow(gray);title('Grayscale');%to display to my image(grayscale format) "to be display at the 2nd location"
+
+bw_img = im2bw(p);%for convert the image to binary format
+%Or we can use bw_img = im2bw(gray);
+
+A = islogical(bw_img);%For check if it's in binary format (if A = 1; TRUE)
+
+subplot(2,2,3);imshow(bw_img);title('Binay');%to display to my image(binary format) "to be display at the 3rd location"
+
+subplot(2,2,4);imhist(gray);title('Histogram');%to display to my image(histogram format) "to be display at the 4th location"
